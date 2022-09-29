@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://mwdr.sharepoint.com/sites/Development/Lists/Personal%20Information%20of%20User/AllItems.aspx",
+      "customActions": {
+        "e7d84b0c-8fca-4c6f-8b2e-052df3994618": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    },
+    "draftAssignor": {
+      "pageUrl": "https://mwdr.sharepoint.com/sites/Development/Lists/Personal%20Information%20of%20User/AllItems.aspx",
+      "customActions": {
+        "e7d84b0c-8fca-4c6f-8b2e-052df3994618": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    }
+  }
+}
