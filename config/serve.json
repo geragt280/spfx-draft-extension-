@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://mwdr.sharepoint.com/sites/Development/Lists/Personal%20Information%20of%20User/AllItems.aspx",
+      "pageUrl": "https://dutchgoatcom.sharepoint.com/sites/ListingDevelopment/Lists/Auction/AllItems.aspx",
       "customActions": {
         "e7d84b0c-8fca-4c6f-8b2e-052df3994618": {
           "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
@@ -16,7 +16,7 @@
       }
     },
     "draftAssignor": {
-      "pageUrl": "https://mwdr.sharepoint.com/sites/Development/Lists/Personal%20Information%20of%20User/AllItems.aspx",
+      "pageUrl": "https://dutchgoatcom.sharepoint.com/sites/ListingDevelopment/Lists/Auction/AllItems.aspx",
       "customActions": {
         "e7d84b0c-8fca-4c6f-8b2e-052df3994618": {
           "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
