@@ -4,7 +4,7 @@ import "@pnp/sp/webs";
 import "@pnp/sp/lists";
 import "@pnp/sp/items";
 import { PeoplePicker, PrincipalType } from "@pnp/spfx-controls-react/lib/PeoplePicker";
-import { Panel, PanelType, PrimaryButton } from '@fluentui/react';
+import { Icon, Label, Panel, PanelType, PrimaryButton } from '@fluentui/react';
 
 interface PanelProps {
     dialogClose: any;
@@ -32,7 +32,11 @@ export default function PanelBody({dialogClose, context, selectedPerson, selecte
     const closeDialogBox = () => {
         setpanelOpen(false);
         setpersonSelected("");
-        dialogClose();
+        setTimeout(()=>{
+            dialogClose();
+
+            setpanelOpen(true);
+        }, 2000);
     };
     
 
@@ -67,23 +71,33 @@ export default function PanelBody({dialogClose, context, selectedPerson, selecte
         //     // onDismissed={() => }
         //     headerText={"Assign Draft"}
         //     >
-        <div style={{paddingLeft:20, paddingRight: 20, paddingBottom: 20}}>
-                <h5 >Select the person to assign the draft</h5>
-                <PeoplePicker
-                    context={context}
-                    titleText="Search Person"
-                    personSelectionLimit={1}
-                    defaultSelectedUsers={[selectedPerson]}
-                    // groupName={""} // Leave this blank in case you want to filter from all users
-                    showtooltip={true}
-                    selectedItems={_getPeoplePickerItems}
-                    showHiddenInUI={false}
-                    principalTypes={[PrincipalType.User]}
-                    resolveDelay={1000} />
+        <div>
+            {panelOpen ? <>
+                <div style={{paddingLeft:20, paddingRight: 20, paddingBottom: 20}}>
+                    <h5 >Select the person to assign the draft</h5>
+                    <PeoplePicker
+                        context={context}
+                        titleText="Search Person"
+                        personSelectionLimit={1}
+                        defaultSelectedUsers={[selectedPerson]}
+                        // groupName={""} // Leave this blank in case you want to filter from all users
+                        showtooltip={true}
+                        selectedItems={_getPeoplePickerItems}
+                        showHiddenInUI={false}
+                        principalTypes={[PrincipalType.User]}
+                        resolveDelay={1000} />
                     <br />
                     <PrimaryButton onClick={() => setListItems()}>
                         Assign
                     </PrimaryButton>
+                </div>
+
+            </> : <div style={{padding: 50, textAlign: 'center', justifyContent:"center", flex:1, flexDirection:'row'}}>
+                    <Label className={'ms-Button-flexContainer buttonLink'} style={{fontSize:20}}>Draft Assigned Successfully</Label><Icon style={{fontSize:50, paddingTop:20, color: "#986f0b"}} iconName='Accept' ></Icon>
+                </div>
+            }
+            
         </div>
+        
   );
 }

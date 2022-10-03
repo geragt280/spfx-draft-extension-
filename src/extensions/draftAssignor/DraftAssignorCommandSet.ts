@@ -44,8 +44,9 @@ export default class DraftAssignorCommandSet extends BaseListViewCommandSet<IDra
     const compareOneCommand: Command = this.tryGetCommand('COMMAND_1');
     if (compareOneCommand) {
       // This command should be hidden unless exactly one row is selected.
-      compareOneCommand.visible = event.selectedRows.length > 0;
-      if (event.selectedRows.length > 0) {
+      // console.log("Context list name", this.context.pageContext.list.title);
+      compareOneCommand.visible = event.selectedRows.length > 0 && this.context.pageContext.list.title == "Auction";
+      if (event.selectedRows.length > 0 && this.context.pageContext.list.title == "Auction") {
         if(event.selectedRows.length == 1 && event.selectedRows[0].getValueByName("Drafter").length){
           this.oldPerson = event.selectedRows[0].getValueByName("Drafter")[0].email;
         }
@@ -53,6 +54,7 @@ export default class DraftAssignorCommandSet extends BaseListViewCommandSet<IDra
           this.oldPerson = "";
         // console.log("Selected Items", );
       }
+      
     }
   }
 
