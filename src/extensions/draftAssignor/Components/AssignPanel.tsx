@@ -1,9 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BaseDialog, IDialogConfiguration } from '@microsoft/sp-dialog';
-import PanelBody from './PanelBody';
+import PanelBody from './AssignPanelBody';
 
-export default class SidePanel extends BaseDialog {
+export default class AssignPanel extends BaseDialog {
 
     public context = null;
     public person = null;
@@ -18,7 +18,7 @@ export default class SidePanel extends BaseDialog {
     }
 
   public render(): void {
-    var x = document.getElementsByClassName("ms-Dialog-main");
+    // var x = document.getElementsByClassName("ms-Dialog-main");
     // x.item(0).setAttribute("hidden", "true");
     // console.log(this.isOpen);
 

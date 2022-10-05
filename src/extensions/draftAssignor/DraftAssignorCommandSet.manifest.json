@@ -20,11 +20,11 @@
       "title": { "default": "Assign" },
       "iconImageUrl": "../icons/person-icon.png",
       "type": "command"
-    }//,
-    // "COMMAND_2": {
-    //   "title": { "default": "Command Two" },
-    //   "iconImageUrl": "icons/cancel.png",
-    //   "type": "command"
-    // }
+    },
+    "COMMAND_2": {
+      "title": { "default": "Error" },
+      "iconImageUrl": "../icons/error-icon.png",
+      "type": "command"
+    }
   }
 }

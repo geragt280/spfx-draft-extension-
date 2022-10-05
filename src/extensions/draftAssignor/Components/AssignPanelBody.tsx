@@ -13,7 +13,7 @@ interface PanelProps {
     selectedRows: any[];
 }
 
-export default function PanelBody({dialogClose, context, selectedPerson, selectedRows} : PanelProps){
+export default function AssignPanelBody({dialogClose, context, selectedPerson, selectedRows} : PanelProps){
 
     const [panelOpen, setpanelOpen] = React.useState(true);
     const [personSelected, setpersonSelected] = React.useState("");
