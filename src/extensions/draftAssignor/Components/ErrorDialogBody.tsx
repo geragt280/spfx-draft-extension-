@@ -52,6 +52,10 @@ const ErrorDialogBody = ({dialogClose, context, errorReason, selectedRows} : Dia
                 {
                     FieldName: "Error",
                     FieldValue: "true"
+                },
+                {
+                    FieldName: "Status",
+                    FieldValue: "Drafted"
                 }]);
                 // var element = await sp.web.lists.getById(context.pageContext.list.id).items.getById(selectedRows[i].getValueByName("ID")).update({
                 //     "ErrorReason": ,
